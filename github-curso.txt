@@ -1,0 +1,62 @@
+*Como inicializar um repositório?
+
+primeiro eu crio uma pasta, logo após eu seleciono "git bash here", dentro da pasta. 
+Agora eu faço o comando: "git init"
+
+*Como adicionar arquivos ao controle de versão?
+
+"git status" - mostra quais arquivos não foram incluidos no controle de versão e quais repositórios estão sendo usados.
+
+comando para preparar o arquivo para ser adicionado ao controle de versão: git add "nomearquivo". Para adicionar vários arquivos, basta
+digitar: "git add ."
+
+
+*Como criar versões do código com commit.
+git commit -m "aqui dentro representa o que foi feito nessa versao"
+
+
+*Como enviar as alterações usando o comando git push.
+primeiro adiciono o repositório em nuvem como alvo: git remote add origin "url do repositorio"
+comando para enviar o arquivo para a branch: git push
+
+
+*ciclo de atualização de código
+
+fiz um teste, adicionei novas linhas ao código e fiz o comando: git status. Ele me mostrou
+o nome do arquivo em vermelho e informou que foram feita modificações neste arquivo
+
+devo agora preparar o arquivo novamente para ser adicionado ao controle de versão.
+entao, dou o comando: "git add ." ou "git add <nome do arquivo>".
+
+pronto, agora dou o comando: git commit -m "modificação que foi feita ou oq foi add"
+
+agora dou "git push" para ser enviado para o controle de versão no repositório.
+
+
+*Como veriicar histórico de atualização
+comando: git reflog
+
+*Como navegar entre versões do meu código
+git reset --hard "id da versão que aparece no reflog"
+
+*O que são branch e como criar uma
+comando para mostrar as branch disponíveis: "git branch"
+comando para criar uma branch nova: "git branch "nome branch""
+comando para mudar de branch: git checkout "nome branch"
+
+*git merge, como unir o código das branch
+antes de tudo, dar o comando "git pull" para trazer as att da nuvem para o meu código
+entro na branch que vai receber o merge:
+git checkout master
+comando para puxar: git merge "nome da branch da qual puxa a att"
+git push
+
+criando uma nova branch tendo como base uma branch especifica(master)
+git checkout -b "nome da nova branch" "branch alvo(base)"
+
+*pull request, um merge democrático.
+
+*gitignore
+impede que suba arquivos confidenciais para o controle de versão
+os arquivos dentro desta pasta estaraão protegidos.
+comando: touch .gitignore e colocar dentro do arquivo o nome da pasta ou arquivo a ser ignorado
